@@ -15,4 +15,6 @@ RUN l2chroot /usr/bin/curl
 FROM gcr.io/distroless/java17-debian11
 COPY --from=build-env /webroot/usr/ /usr/
 COPY --from=build-env /webroot/lib/ /lib/
+
+ENTRYPOINT [""]
 CMD ["/usr/bin/curl"]
